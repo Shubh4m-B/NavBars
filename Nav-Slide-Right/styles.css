@@ -31,12 +31,46 @@ nav > ul {
   justify-content: space-around;
 }
 
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 0px 40px;
+    justify-content: space-between;
+  }
+  nav > ul {
+    display: none;
+  }
+}
+
+.burger {
+  display: none;
+}
+
+.burger > div {
+  width: 30px;
+  height: 2px;
+  margin: 5px;
+  background-color: #cdcdcd;
+}
+
+@media screen and (max-width: 600px) {
+  .burger {
+    display: block;
+  }
+}
+
 .sidepane {
   position: absolute;
   right: 0%;
   background-color: #474747;
   width: 50%;
   height: 88vh;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .sidepane {
+    display: block;
+  }
 }
 
 .sidepane > ul {
