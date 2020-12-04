@@ -1,3 +1,6 @@
+const sidepane = document.querySelector(".sidepane");
+sidepane.classList.remove("expanded");
+
 document.querySelector(".burger").addEventListener('click',()=>{
     const top = document.querySelector("#top");
     const middle = document.querySelector("#middle");

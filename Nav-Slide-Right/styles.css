@@ -15,6 +15,9 @@ nav {
   color: #cdcdcd;
   align-items: center;
   justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 a {
@@ -34,7 +37,7 @@ nav > ul {
   justify-content: space-around;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   nav {
     padding: 0px 40px;
     justify-content: space-between;
@@ -55,7 +58,7 @@ nav > ul {
   background-color: #cdcdcd;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .burger {
     display: block;
   }
@@ -63,15 +66,17 @@ nav > ul {
 
 .sidepane {
   position: absolute;
-  right: -100%;
+  z-index: 2;
+  right: -40%;
   background-color: #474747;
   width: 50%;
   height: 88vh;
   display: none;
-  transition: all 0.5s ease-in-out;
+  opacity: 0%;
+  transition: all 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .sidepane {
     display: block;
   }
@@ -88,6 +93,7 @@ nav > ul {
 
 .expanded {
   right: 0%;
+  opacity: 100%;
 }
 #top,
 #middle,
@@ -96,16 +102,17 @@ nav > ul {
 }
 
 .top {
-  transform: rotateZ(45deg) translateY(5px);
+  transform: rotateZ(45deg) translateY(10px);
   /* transition: all 0.5s ease-in-out; */
 }
 
 .middle {
-  display: none;
-  /* transition: all 0.5s ease-in-out; */
+  transform: rotateY(90deg);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .bottom {
-  transform: rotateZ(-45deg) translateY(-5px);
+  transform: rotateZ(-45deg) translateY(-10px);
   /* transition: all 0.5s ease-in-out; */
 }
