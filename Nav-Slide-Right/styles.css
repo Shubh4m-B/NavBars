@@ -6,8 +6,13 @@
 }
 body {
   overflow-x: hidden;
+  height: 200vh;
 }
 
+.navbar {
+  top: 0;
+  position: sticky;
+}
 nav {
   min-height: 12vh;
   background-color: #474747;
@@ -15,9 +20,7 @@ nav {
   color: #cdcdcd;
   align-items: center;
   justify-content: space-around;
-  position: sticky;
-  top: 0;
-  z-index: 3;
+  box-shadow: #474747 0px 2px 20px;
 }
 
 a {
@@ -37,16 +40,6 @@ nav > ul {
   justify-content: space-around;
 }
 
-@media screen and (max-width: 700px) {
-  nav {
-    padding: 0px 40px;
-    justify-content: space-between;
-  }
-  nav > ul {
-    display: none;
-  }
-}
-
 .burger {
   display: none;
 }
@@ -56,12 +49,6 @@ nav > ul {
   height: 2px;
   margin: 5px;
   background-color: #cdcdcd;
-}
-
-@media screen and (max-width: 700px) {
-  .burger {
-    display: block;
-  }
 }
 
 .sidepane {
@@ -74,9 +61,20 @@ nav > ul {
   display: none;
   opacity: 0%;
   transition: all 0.3s ease-in-out;
+  box-shadow: #474747 -2px 0px 20px;
 }
 
 @media screen and (max-width: 700px) {
+  nav {
+    padding: 0px 40px;
+    justify-content: space-between;
+  }
+  nav > ul {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
   .sidepane {
     display: block;
   }
