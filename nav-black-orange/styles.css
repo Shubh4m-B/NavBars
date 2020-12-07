@@ -6,29 +6,75 @@
   color: white;
 }
 
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
 
 nav {
   height: 12vh;
-  background-color: rgb(17, 17, 17);
+  background-color: orange;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  margin: none;
+  height: 100%;
+  width: 35%;
+  transform: skewX(150deg);
+  /* clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%); */
+}
 #logo {
   font-size: 30px;
+  transform: skewX(30deg);
 }
 
 .links {
-  width: 40%;
+  transform: skewX(150deg);
+  height: 100%;
+  background-color: rgb(22, 22, 22);
+  width: 65%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  /* clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%); */
+}
+
+@media screen and (max-width: 750px) {
+  .links {
+    display: none;
+  }
 }
 
 .links > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   list-style: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.links > li:hover {
+  background-color: black;
+}
+
+.links > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  transform: skewX(30deg);
 }
