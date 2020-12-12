@@ -9,10 +9,18 @@
 body {
   background-color: black;
   overflow-x: hidden;
+  height: 200vh;
 }
 
 a {
   text-decoration: none;
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+  top: 0;
+  position: sticky;
 }
 
 nav {
@@ -23,12 +31,26 @@ nav {
   align-items: center;
 }
 
+i {
+  display: none;
+  opacity: 0%;
+  color: rgb(22, 22, 22);
+  margin: 40px;
+  transform: skewX(30deg);
+  font-size: x-large;
+  transition: all 0.4s ease-in-out;
+}
+
+/* i:hover {
+  color: white;
+} */
+
 .logo {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   background-color: orange;
-  margin: none;
+  margin-left: 100px;
   height: 100%;
   width: 35%;
   transform: skewX(150deg);
@@ -37,6 +59,7 @@ nav {
 #logo {
   font-size: 30px;
   transform: skewX(30deg);
+  margin: 40px;
 }
 
 .links {
@@ -81,10 +104,9 @@ nav {
 .sidepane {
   width: 50%;
   height: 88vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   display: none;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
 }
 
 .sidepane > ul {
@@ -104,14 +126,21 @@ nav {
   }
   .sidepane {
     position: absolute;
-    left: -10%;
+    left: -60%;
     display: block;
   }
-  nav {
-    background-color: rgb(22, 22, 22);
-  }
+  /* nav {
+    background-color: orange;
+  } */
   .logo {
-    width: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  i {
+    display: block;
+    margin-right: 10px;
+    opacity: 100%;
   }
 }
 
@@ -143,4 +172,13 @@ nav {
   background-color: black;
   color: orange;
   font-size: 20px;
+}
+
+.rotated {
+  transform: skewX(30deg) rotateY(180deg);
+}
+
+.expanded {
+  left: -10%;
+  opacity: 100%;
 }
